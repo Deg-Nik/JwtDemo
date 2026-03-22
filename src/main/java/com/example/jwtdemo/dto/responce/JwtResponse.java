@@ -1,9 +1,18 @@
 package com.example.jwtdemo.dto.responce;
 
-/**
- * @author : Nikolai Degtiarev
- * created : 19.03.26
- * 
- * 
- **/public class JwtResponce {
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class JwtResponse {
+    private String accessToken;
+    private String refreshToken;
+    private String tokenType = "Bearer";
+    private Long expiresIn;     // ms
+    private String username;
 }

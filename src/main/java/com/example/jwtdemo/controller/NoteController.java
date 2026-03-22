@@ -1,8 +1,7 @@
 package com.example.jwtdemo.controller;
 
 import com.example.jwtdemo.dto.request.NoteRequest;
-import com.example.jwtdemo.dto.response.NoteResponse;
-import com.example.jwtdemo.entity.Note;
+import com.example.jwtdemo.dto.responce.NoteResponse;import com.example.jwtdemo.entity.Note;
 import com.example.jwtdemo.service.NoteService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

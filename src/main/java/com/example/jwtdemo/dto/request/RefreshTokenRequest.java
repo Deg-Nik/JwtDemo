@@ -1,9 +1,10 @@
 package com.example.jwtdemo.dto.request;
 
-/**
- * @author : Nikolai Degtiarev
- * created : 19.03.26
- * 
- * 
- **/public class RefreshTokenRequest {
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class RefreshTokenRequest {
+    @NotBlank(message = "Refresh token обязателен")
+    private String refreshToken;
 }

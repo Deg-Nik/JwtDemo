@@ -1,9 +1,12 @@
 package com.example.jwtdemo.dto.request;
 
-/**
- * @author : Nikolai Degtiarev
- * created : 19.03.26
- * 
- * 
- **/public class LoginRequest {
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class LoginRequest {
+    @NotBlank(message = "Username обязателен")
+    private String username;
+    @NotBlank(message = "Password обязателен")
+    private String password;
 }

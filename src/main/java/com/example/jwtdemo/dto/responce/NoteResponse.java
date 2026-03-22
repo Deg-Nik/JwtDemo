@@ -1,4 +1,4 @@
-package com.example.jwtdemo.dto.response;
+package com.example.jwtdemo.dto.responce;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
