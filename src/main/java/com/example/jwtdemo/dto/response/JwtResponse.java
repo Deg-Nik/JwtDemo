@@ -1,4 +1,4 @@
-package com.example.jwtdemo.dto.responce;
+package com.example.jwtdemo.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

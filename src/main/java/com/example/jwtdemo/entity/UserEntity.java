@@ -40,4 +40,7 @@ public class UserEntity {
     // В реальных проектах это часто выносят в отдельную сущность RoleEntity и связывают через @ManyToMany
     @Column(nullable = false, length = 50)
     private String role;
+
+    @Column(nullable = false)
+    private boolean enabled;
 }

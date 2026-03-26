@@ -1,6 +1,5 @@
 package com.example.jwtdemo.repository;
 
-import com.example.jwtdemo.entity.User;
 import com.example.jwtdemo.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -4,7 +4,7 @@ import com.example.jwtdemo.dto.request.LoginRequest;
 import com.example.jwtdemo.dto.request.RefreshTokenRequest;
 import com.example.jwtdemo.dto.request.RegisterRequest;
 
-import com.example.jwtdemo.dto.responce.JwtResponse;
+import com.example.jwtdemo.dto.response.JwtResponse;
 import com.example.jwtdemo.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

@@ -2,7 +2,7 @@ package com.example.jwtdemo.service;
 
 import com.example.jwtdemo.dto.request.NoteRequest;
 import com.example.jwtdemo.entity.Note;
-import com.example.jwtdemo.entity.User;
+import com.example.jwtdemo.entity.UserEntity;
 import com.example.jwtdemo.repository.NoteRepository;
 import com.example.jwtdemo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +25,7 @@ public class NoteService {
      * Получить все заметки текущего пользователя
      */
     public List<Note> getMyNotes() {
-        User currentUser = getCurrentUser();
+        UserEntity currentUser = getCurrentUser();
         return noteRepository.findByUser(currentUser);
     }
 
@@ -33,7 +33,7 @@ public class NoteService {
      * Получить заметку по ID (только свою!)
      */
     public Note getNoteById(Long id) {
-        User currentUser = getCurrentUser();
+        UserEntity currentUser = getCurrentUser();
         return noteRepository.findByIdAndUser(id, currentUser)
                 .orElseThrow(() -> new RuntimeException("Note not found or access denied"));
     }
@@ -43,7 +43,7 @@ public class NoteService {
      */
     @Transactional
     public Note createNote(NoteRequest request) {
-        User currentUser = getCurrentUser();
+        UserEntity currentUser = getCurrentUser();
 
         Note note = new Note();
         note.setTitle(request.getTitle());
@@ -78,7 +78,7 @@ public class NoteService {
     /**
      * Получить текущего пользователя из SecurityContext
      */
-    private User getCurrentUser() {
+    private UserEntity getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
 

@@ -1,6 +1,6 @@
 package com.example.jwtdemo.service;
 
-import com.example.jwtdemo.entity.User;
+import com.example.jwtdemo.entity.UserEntity;
 import com.example.jwtdemo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
 
-    public User findByUsername(String username) {
+    public UserEntity findByUsername(String username) {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("Пользователь с именем " + username + " не найден."));
     }
